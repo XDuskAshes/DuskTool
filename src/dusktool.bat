@@ -4,19 +4,6 @@ set name=DuskTool 1.0.0
 
 title %name%
 
-goto tool
-
-:genericError
-if exist "popup\error.bat" (
-    call popup\error.bat DuskTool genericError Cancel.
-    exit
-) else (
-    title DuskTool encountered a generic error
-    echo A generic error occured, and the error program couldn't be found.
-    ping localhost -n 10 >nul
-    exit
-)
-
 :TempClean
 cd "C:\Windows\Temp\"
 del "*"
