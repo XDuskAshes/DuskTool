@@ -4,6 +4,8 @@ set name=DuskTool 1.0.0
 
 title %name%
 
+goto tool
+
 :TempClean
 cd "C:\Windows\Temp\"
 del "*"
