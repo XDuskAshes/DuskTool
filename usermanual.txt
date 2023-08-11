@@ -1,0 +1,30 @@
+DuskTool 1.1.0 User manual
+
+This text doc details using DuskTool 1.1.0. In terms of actual use, simply type the number of the thing you wanna use,
+then hit enter.
+
+1. Cleaning temp files
+This will clean your C:\Windows\Temp\ folder, along with C:\Users\(your user)\AppData\Local\Temp\ folder.
+Cleaning temp files is always useful for space efficiency.
+
+2. Pinging internet addresses/ip's
+This contains two sub-prompts. One asks what you want to ping, and the second asks if you want it to loop until you press CTRL+C
+This is a good way to test your network connection.
+
+3. System info
+Gets your system info and displays it to you, and only you.
+This is helpful for troubleshooting computer issues.
+
+4. Running 'ipconfig'
+Same effect as opening cmd and typing 'ipconfig'.
+Gets your internet and ip info and displays it to you, and only you.
+
+5. tracert functionality
+Traces how many hops between servers it takes to reach an internet/ip address.
+This can be useful for network troubleshooting.
+
+6. Program info
+Gets the info of DuskTool.
+
+7. Exit
+Do I need to explain?
