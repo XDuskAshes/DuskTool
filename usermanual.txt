@@ -1,7 +1,12 @@
-DuskTool 1.1.0 User manual
+DuskTool 1.1.1 User manual
 
-This text doc details using DuskTool 1.1.0. In terms of actual use, simply type the number of the thing you wanna use,
+This text doc details using DuskTool 1.1.1. In terms of actual use, simply type the number of the thing you wanna use,
 then hit enter.
+
+VERSION NUMBERING:
+First number: Release version
+Second number: Additional features version
+Third number: Revision of either release or additional features
 
 1. Cleaning temp files
 This will clean your C:\Windows\Temp\ folder, along with C:\Users\(your user)\AppData\Local\Temp\ folder.

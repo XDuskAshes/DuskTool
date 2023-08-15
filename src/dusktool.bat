@@ -1,6 +1,6 @@
 @echo off
 
-set name=DuskTool 1.1.0
+set name=DuskTool 1.1.1
 
 title %name%
 
@@ -32,7 +32,10 @@ goto tool
 :: Grab system info.
 :: TODO: Make this custom.
 :sysinfo
-systeminfo
+for /f "usebackq tokens=*" %%i in (`ver`) do set os_version=%%i
+echo OS Version: %os_version%
+echo OS Type: %OS%
+echo %COMPUTERNAME%
 pause
 goto tool
 
