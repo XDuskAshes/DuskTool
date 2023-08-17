@@ -1,3 +1,3 @@
-# DuskTool 1.1.1
+# DuskTool-BASH 1.0.0
 
-A batch program for general windows utility.
+A bash version of the batch program for general windows utility.
