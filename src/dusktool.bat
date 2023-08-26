@@ -47,7 +47,7 @@ goto tool
 echo %name%
 echo By Dusk
 echo Functionality:
-echo Clean temp files, ping internet addresses, view sysinfo, see port info
+echo Clean temp files, ping internet addresses, view sysinfo, see port info, trace all the hops between you and an address
 pause
 goto tool
 
