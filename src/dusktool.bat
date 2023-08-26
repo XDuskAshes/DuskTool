@@ -1,6 +1,6 @@
 @echo off
 
-set name=DuskTool 1.1.0
+set name=DuskTool 1.2.0
 
 title %name%
 
@@ -47,7 +47,7 @@ goto tool
 echo %name%
 echo By Dusk
 echo Functionality:
-echo Clean temp files, ping internet addresses, view sysinfo, see port info, trace all the hops between you and an address
+echo Clean temp files, ping internet addresses, view sysinfo, see port info, trace all the hops between you and an address, find a file/dir
 pause
 goto tool
 
@@ -58,6 +58,17 @@ tracert %choice%
 pause
 goto tool
 
+:searchfs
+set /p lookfor="look for what? "
+if exist %lookfor% (
+    echo %lookfor% exists.
+) else (
+    echo %lookfor% does not exist.
+)
+pause
+goto tool
+
+
 :tool
 cls
 echo %name%
@@ -66,8 +77,9 @@ echo 2 - Ping an address.
 echo 3 - System info.
 echo 4 - Run the 'ipconfig' command.
 echo 5 - Trace an address.
-echo 6 - Program info.
-echo 7 - Exit.
+echo 6 - Search for a file/dir
+echo 7 - Program info.
+echo 8 - Exit.
 set choice="0"
 set /p choice=Enter one of the above numbers: 
 
@@ -82,8 +94,10 @@ if "%choice%"=="1" (
 ) else if "%choice%"=="5" (
     call :trace
 ) else if "%choice%"=="6" (
-    call :info
+    call :searchfs
 ) else if "%choice%"=="7" (
+    call :info
+) else if "%choice%" == "8" then (
     echo Exiting.
     pause
     exit
