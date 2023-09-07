@@ -1,10 +1,19 @@
 @echo off
 
-set name=DuskTool 1.2.0
+set name=DuskTool 1.2.1
 
 title %name%
 
 goto tool
+
+:opnosupport
+cls
+echo error:1
+echo OperationNotSupportedError
+echo Details: Operation not supported. You either entered something wrong or nothing at all.
+pause
+goto tool
+
 
 :: Temp files cleanup.
 :TempClean
@@ -80,7 +89,6 @@ echo 5 - Trace an address.
 echo 6 - Search for a file/dir
 echo 7 - Program info.
 echo 8 - Exit.
-set choice="0"
 set /p choice=Enter one of the above numbers: 
 
 if "%choice%"=="1" (
@@ -97,10 +105,13 @@ if "%choice%"=="1" (
     call :searchfs
 ) else if "%choice%"=="7" (
     call :info
-) else if "%choice%" == "8" then (
+) else if "%choice%"=="8" (
     echo Exiting.
     pause
     exit
+) else if "%choice%"=="" (
+call :opnosupport
+) else (
+call :opnosupport
 )
-
 goto tool
